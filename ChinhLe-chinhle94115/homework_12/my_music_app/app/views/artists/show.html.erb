@@ -1,0 +1,34 @@
+<div class="col-xs-12">
+<div class="table-responsive">
+<h1 style="#color#33333;"> Our Cool Artist </h1>
+  <table class="table table-hover">
+      <!-- This is a table row with headers -->
+    <tr class="small">
+      <th> Artist Image </th>
+      <th> Name </th>
+      <th> Bio </th>
+      <th> Songs </th>
+
+    </tr>
+
+    <tr>
+      <td class="col-md-2"> <%= image_tag(@artist.image_url, class: 'img-thumbnail img-responsive') %> </td>
+      <td> <%=@artist.name %> </td>
+      <td> <%=@artist.description %> </td>
+      <td> <% @artist.songs.each do |song| %>
+            <%= song.title %>
+          <% end %>
+      </td>
+
+
+      </td>
+
+    </tr>
+
+
+</div>
+<div>
+  <%=link_to "All Artists", artists_path, class: 'btn btn-lg btn-primary'%>
+  <%=link_to "Edit Artist", edit_artist_path(@artist), class: 'btn btn-lg btn-warning'%>
+</div>
+</div>

@@ -1,0 +1,30 @@
+<div class="col-xs-12">
+<div class="table-responsive">
+<h1 style="#color#33333;"> Awesome Song </h1>
+  <table class="table table-hover">
+      <!-- This is a table row with headers -->
+    <tr class="small">
+      <th> Song Title </th>
+      <th> Length </th>
+      <th> Genre </th>
+
+
+    </tr>
+
+    <tr>
+      <td> <%=@song.title %> </td>
+      <td> <%=@song.length %> </td>
+      <td> <%=@song.genre %> </td>
+
+
+      </td>
+
+    </tr>
+
+
+</div>
+<div>
+  <%=link_to "All Songs", songs_path, class: 'btn btn-lg btn-primary'%>
+  <%=link_to "Edit Song", edit_song_path(@song), class: 'btn btn-lg btn-warning'%>
+</div>
+</div>
