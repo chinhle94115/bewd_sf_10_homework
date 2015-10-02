@@ -19,7 +19,7 @@
         <td> <%=song.genre %> </td>
         <td> <%=link_to 'Show', songs_show_path(@song), class: 'btn btn-default btn-xs' %>
              <%= link_to 'Edit', songs_edit_path(song), class: 'btn btn-success btn-xs' %>
-
+             <%= link_to 'Delete', songs_show_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-xs btn-danger' %>
         </td>
       </tr>
       <% end %>
